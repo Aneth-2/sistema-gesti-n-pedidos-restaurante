@@ -1,0 +1,6 @@
+export enum EstadoPlato {
+  PENDIENTE = "PENDIENTE",
+  EN_PREPARACION = "EN_PREPARACION",
+  LISTO = "LISTO",
+  SERVIDO = "SERVIDO"
+}
