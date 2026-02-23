@@ -1,15 +1,16 @@
 import { Mesa } from "../../domain/entities/Mesa";
+import { MesaRepository } from "../../domain/repositories/MesaRepo";
 
 export class RegistrarMesaUseCase {
-  private mesas: Mesa[] = [];
+  constructor(private mesaRepository: MesaRepository) {}
 
   public ejecutar(numero: number): Mesa {
     const mesa = new Mesa(numero);
-    this.mesas.push(mesa);
+    this.mesaRepository.save(mesa);
     return mesa;
   }
 
   public obtenerMesas(): Mesa[] {
-    return this.mesas;
+    return this.mesaRepository.findAll();
   }
 }
