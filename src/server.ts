@@ -1,7 +1,7 @@
-import { RegistrarMesaUseCase } from "./application/useCases/RegistrarMesaUseCase";
-import { RegistrarClienteEnMesaUseCase } from "./application/useCases/RegistrarClienteEnMesaUseCase";
-import { CrearPedidoUseCase } from "./application/useCases/CrearPedidoUseCase";
-import { AgregarPlatoUseCase } from "./application/useCases/AgregarPlatoUseCase";
+import { RegistrarMesaUseCase } from "./application/useCases/RegistrarMesa";
+import { RegistrarClienteEnMesaUseCase } from "./application/useCases/RegistrarClienteEnMesa";
+import { CrearPedidoUseCase } from "./application/useCases/CrearPedido";
+import { AgregarPlatoUseCase } from "./application/useCases/AgregarPlato";
 import { MetricasService } from "./application/services/MetricasService";
 
 const registrarMesa = new RegistrarMesaUseCase();
