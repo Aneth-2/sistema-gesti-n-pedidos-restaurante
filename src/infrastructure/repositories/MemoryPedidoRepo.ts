@@ -13,6 +13,6 @@ export class InMemoryPedidoRepository implements PedidoRepository {
   }
 
   findById(id: string): Pedido | undefined {
-    return this.pedidos.find(p => p["id"] === id);
+  return this.pedidos.find(p => p.getId() === id);
   }
 }

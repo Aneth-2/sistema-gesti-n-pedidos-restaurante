@@ -36,4 +36,8 @@ export class Pedido {
   public obtenerFechaCreacion(): Date {
     return this.fechaCreacion;
   }
+
+  public getId(): string {
+  return this.id;
+  }
 }
