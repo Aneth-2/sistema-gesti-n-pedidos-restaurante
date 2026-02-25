@@ -24,10 +24,8 @@ export class PedidoController {
           throw new Error("clienteId y pedidoId son obligatorios");
         }
 
-        // ⚠ Aquí simulamos cliente ya existente
-        // En bloque siguiente mejoraremos esto
         const pedido = this.crearPedidoUseCase.ejecutar(
-          { getId: () => clienteId } as any,
+          clienteId,
           pedidoId
         );
 
