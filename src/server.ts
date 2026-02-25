@@ -9,13 +9,21 @@ import { CrearPedidoUseCase } from "./application/useCases/CrearPedido";
 import { AgregarPlatoUseCase } from "./application/useCases/AgregarPlato";
 import { PedidoController } from "./presentation/controllers/PedidoController";
 
+import { InMemoryClienteRepository } from "./infrastructure/repositories/MemoryClienteRepo";
+import { RegistrarClienteEnMesaUseCase } from "./application/useCases/RegistrarClienteEnMesa";
+
 // Repositorios
 const mesaRepository = new InMemoryMesaRepository();
 const pedidoRepository = new InMemoryPedidoRepository();
+const clienteRepository = new InMemoryClienteRepository(); 
 
 // UseCases
 const registrarMesaUseCase = new RegistrarMesaUseCase(mesaRepository);
-const crearPedidoUseCase = new CrearPedidoUseCase(pedidoRepository);
+const registrarCliente = new RegistrarClienteEnMesaUseCase(clienteRepository); 
+const crearPedidoUseCase = new CrearPedidoUseCase(
+  pedidoRepository,
+  clienteRepository 
+);
 const agregarPlatoUseCase = new AgregarPlatoUseCase();
 
 // Controllers
