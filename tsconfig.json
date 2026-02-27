@@ -13,6 +13,6 @@
     "sourceMap": true,
     "noImplicitAny": true
   },
-  "include": ["src"],
+  "include": ["src", "src/domain/errors/ValidationError.ts"],
   "exclude": ["node_modules", "dist"]
 }
